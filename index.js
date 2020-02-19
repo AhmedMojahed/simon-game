@@ -13,13 +13,13 @@ $(document).keypress(() => {
     nextSequence();
   }
 });
-$("body").on("touch", () => {
+$(document).on("touchmove", () => {
   if (!started) {
     started = true;
     $("#level-title").text("Level 0");
     nextSequence();
   }
-});
+},false);
 $(".btn").click(function() {
   var userChosenColour = this.id;
   userClickedPattern.push(userChosenColour);
