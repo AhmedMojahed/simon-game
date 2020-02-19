@@ -13,7 +13,13 @@ $(document).keypress(() => {
     nextSequence();
   }
 });
-
+$(document).click(() => {
+  if (!started) {
+    started = true;
+    $("#level-title").text("Level 0");
+    nextSequence();
+  }
+});
 $(".btn").click(function() {
   var userChosenColour = this.id;
   userClickedPattern.push(userChosenColour);
@@ -73,4 +79,5 @@ function startOver() {
   level = 0;
   started = false;
   userClickedPattern = [];
+  $("h1").text("Game Over, Press Any Key to Restart");
 }
