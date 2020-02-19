@@ -13,7 +13,7 @@ $(document).keypress(() => {
     nextSequence();
   }
 });
-$(document).on("touch", () => {
+$("body").on("touch", () => {
   if (!started) {
     started = true;
     $("#level-title").text("Level 0");
